@@ -45,7 +45,7 @@ const ProductsCards = ({
                 <CardMedia
                   component="img"
                   alt="green iguana"
-                  height="140"
+                  height="200"
                   image={product?.thumbnail}
                 />
                 <CardContent sx={{}}>
