@@ -33,7 +33,7 @@ const ProductsCards = ({
       {Array.isArray(products) && (
         <Grid container spacing={4}>
           {products?.map((product) => (
-            <Grid item xs={12} sm={6} md={4} key={product.id} sx={{}}>
+            <Grid item xs={12} sm={6} md={4} key={product.id}>
               <Card
                 sx={{
                   maxWidth: 345,
@@ -64,13 +64,13 @@ const ProductsCards = ({
                 <CardActions sx={{ mt: "auto", display: "block", p: 0 }}>
                   <Typography
                     variant="h4"
-                    sx={{ pl: 2, color: "#27C8A4", fontWeight: "bold", mb: 2 }}
+                    sx={{ pl: 2, color: "#050f2c", fontWeight: "bold", mb: 2 }}
                   >
                     ${product.price}
                   </Typography>
                   <Box
                     sx={{
-                      bgcolor: "#27C8A4",
+                      bgcolor: "#226089",
                       p: 2,
                       display: "flex",
                       gap: ".5em",
@@ -80,10 +80,10 @@ const ProductsCards = ({
                       variant="contained"
                       size="small"
                       sx={{
-                        bgcolor: "#278EA5",
+                        bgcolor: "#0099cc",
                         boxShadow: "none",
                         "&: hover": {
-                          bgcolor: "#1e6262",
+                          bgcolor: "#226089",
                         },
                       }}
                     >
@@ -93,10 +93,10 @@ const ProductsCards = ({
                       variant="contained"
                       size="small"
                       sx={{
-                        bgcolor: "#232b59",
+                        bgcolor: "#caccd1",
                         boxShadow: "none",
                         "&: hover": {
-                          bgcolor: "#1e6262",
+                          bgcolor: "#226089",
                         },
                       }}
                     >
