@@ -32,6 +32,11 @@ const ProductsCards = ({
     <Container sx={{ my: 10 }}>
       {Array.isArray(products) && (
         <Grid container spacing={4}>
+          {products.length === 0 && (
+            <Box sx={{ mx: "auto" }}>
+              <Typography variant="h3">No result found</Typography>
+            </Box>
+          )}
           {products?.map((product) => (
             <Grid item xs={12} sm={6} md={4} key={product.id}>
               <Card
@@ -109,13 +114,15 @@ const ProductsCards = ({
           ))}
         </Grid>
       )}
-      <Box sx={{ display: "flex", justifyContent: "center", mt: 5 }}>
-        <Pagination
-          count={totalPageCount}
-          page={page}
-          onChange={handlePageChange}
-        />
-      </Box>
+      {products.length !== 0 && (
+        <Box sx={{ display: "flex", justifyContent: "center", mt: 5 }}>
+          <Pagination
+            count={totalPageCount}
+            page={page}
+            onChange={handlePageChange}
+          />
+        </Box>
+      )}
     </Container>
   );
 };
